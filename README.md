@@ -11,37 +11,6 @@
 - **No Queues**: Once you’ve completed your payment, simply exit the supermarket—no need to wait in line.
 - **Seamless User Experience**: Simple and intuitive interface for quick and easy shopping.
 
-## Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/scan_pay.git
-    ```
-
-2. Navigate to the project directory:
-
-    ```bash
-    cd scan_pay
-    ```
-
-3. Install dependencies:
-
-    For **Flutter**:
-
-    ```bash
-    flutter pub get
-    ```
-
-4. Set up Firebase (for cart, authentication, and transaction management):
-   - Follow the [Firebase setup guide for Flutter](https://firebase.flutter.dev/docs/overview) to configure Firebase for your app.
-   - Ensure that you have added Firebase Authentication, Firestore, and other required services in the Firebase console.
-   
-5. Run the app:
-
-    ```bash
-    flutter run
-    ```
 
 ## How It Works
 
