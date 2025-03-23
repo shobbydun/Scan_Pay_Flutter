@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+def flutterVersionCode = project.hasProperty('flutterVersionCode') ? project.flutterVersionCode.toInteger() : 1
+def flutterVersionName = project.hasProperty('flutterVersionName') ? project.flutterVersionName : "1.0.0"
+
+android {
+    namespace = "com.example.scan_pay"
+    compileSdk = 34  // Corrected for Groovy DSL
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    defaultConfig {
+        applicationId "com.example.scan_pay"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode flutterVersionCode  // Reference versionCode from gradle.properties
+        versionName flutterVersionName  // Reference versionName from gradle.properties
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.getByName("debug")  // Check your signing config
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
